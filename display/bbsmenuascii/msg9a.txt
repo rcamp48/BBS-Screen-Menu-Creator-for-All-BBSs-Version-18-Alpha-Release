@@ -1,0 +1,5 @@
+
+    Conference : @CONF.NAME@
+    Time Left  : @USER.TIMELEFTTODAY@
+
+    Message Menu Command >>  

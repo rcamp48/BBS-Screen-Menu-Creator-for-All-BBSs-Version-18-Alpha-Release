@@ -1,0 +1,20 @@
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                                                  ³
+³ Internet Menu    Spy Visits Spy BBS              ³
+³                                                  ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+³             [T] Telnet Outbound                  ³
+³             [F] FTP Outbound                     ³
+³                                                  ³
+³             [?] Info on Telnet and  FTP          ³
+³             [Q] Quit to Previous Menu            ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+@07@
+ You are about to establish a connection to an Internet host.
+ The performance, reliability, availability and content of Internet
+ hosts is beyond @SYSTEM.BBSNAME@'s control.
+
+ Conference : @CONF.NAME@
+ Time Left  : @USER.TIMELEFTTODAY@
+ Command >>  
+@07@

@@ -1,0 +1,12 @@
+
+^---------------------------------------------------------------------------+
+!  Sysop Menu                     Spy Visits Spy BBS                        !
+*------------------------------------------------&--&-----------------------=
+!                                                !  !    On Every Menu      !
+! [A] Activity Logs      [Q] Quit To MAIN MENU   !  ! [G] Goodbye           !
+! [B] Broadcast Message  [S] Status of Database  !  ! [H] Help Level        !
+! [F] File Database      [U] User Database       !  ! [J] Join Conference   !
+! [K] Kill Activity Logs [1] MESSAGE MENU        !  ! [Y] Your Settings     !
+! [N] Node Management    [2] FILE MENU           !  ! [C] Config WCX Files  !
+! [V] View WILDCAT.LOG   [3] WtLord 2.9C Setup   !  ! [?] Command Help      !
+~------------------------------------------------#--#-----------------------%

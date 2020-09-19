@@ -1,0 +1,17 @@
+^-------------------------+
+!   Spy Visits Spy BBS    !
+!        File Menu        !
+!                         !
+*-------------------------=
+! [G] Goodbye             !
+! [F] File Transfer Help  !
+! [H] Change help level   !
+! [I] Info. On a File     !
+! [L] List Files          !
+! [M] MESSAGE MENU        !
+! [N] New Files listing   !
+! [Q] Quit to main        !
+! [S] Search for files    !
+! [U] UpLoad files        !
+! [?] Command Help        !
+~-------------------------%

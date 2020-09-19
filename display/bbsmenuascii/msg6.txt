@@ -1,0 +1,14 @@
+^---------------------------------------------------------------------------+
+!                                                                           !
+!        Message Menu                     Spy Visits Spy BBS                !
+!                                                                           !
+*------------------------------------------------&--&-----------------------=
+!                                                !  !    On Every Menu      !
+! [C] Check Your Mail   [S] Scan Messages        !  !                       !
+! [E] Enter New Message [T] Transfer QWK Menu    !  ! [G] Goodbye           !
+! [F] FILE MENU         [U] Update Settings      !  ! [H] Help Level        !
+! [K] Kill Messages                              !  ! [J] Join Conference   !
+! [Q] Quit to Main Menu                          !  ! [Y] Your Settings     !
+! [R] Read Messages                              !  !                       !
+!                                                !  ! [?] Command Help      !
+~------------------------------------------------#--#-----------------------%

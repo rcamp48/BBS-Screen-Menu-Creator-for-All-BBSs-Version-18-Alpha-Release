@@ -1,0 +1,14 @@
+
+^-------------------------------------------------------------------------+
+!               Spy Visits Spy BBS             Main Menu                  !
+*-------------------------------------------------------------------------=
+!  [B] Bulletin Menu      [P] Page Sysop For Chat    [G] Goodbye          !
+!  [C] Comments To Sysop  [Q] Questionaire Menu      [H] Help Menu        !
+!  [D] Online Games Menu  [S] Stats On BBS           [J] Join Conference  !
+!  [F] File Menu          [U] User List              [Y] Your Settings    !
+!  [I] Initial Welcome    [V] Verify User            [?] Command Help     !
+!  [L] Live Chat / Users  [W] Who Is Online          [M] Message Menu     !
+!  [N] News Letter        [Z] Page Online User       [X] Internet Menu    !
+*-------------------------------------------------------------------------=
+!  [1] Run Screen Maker   [2] Run Config Editor                           !
+~-------------------------------------------------------------------------%

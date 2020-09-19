@@ -1,0 +1,8 @@
+
+ You are about to establish a connection to an Internet host.
+ The performance, reliability, availability and content of Internet
+ hosts is beyond @SYSTEM.BBSNAME@'s control.
+
+ Conference : @CONF.NAME@
+ Time Left  : @USER.TIMELEFTTODAY@
+ Command >>  

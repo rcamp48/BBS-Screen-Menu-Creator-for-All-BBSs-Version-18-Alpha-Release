@@ -1,0 +1,16 @@
+^-------------------------------------------------------+
+!                                                       !
+!       Main Menu              Spy Visits Spy BBS       !
+!                                                       !
+*-------------------------------------------------------=
+!                                                       !
+!                 [B] BULLETIN MENU                     !
+!                 [C] Comments to Sysop                 !
+!                 [F] FILE MENU                         !
+!                 [G] Goodbye                           !
+!                 [H] Change help level                 !
+!                 [I] Initial Welcome                   !
+!                 [M] MESSAGE MENU                      !
+!                 [Q] QUESTIONNAIRE MENU                !
+!                 [?] Command Help                      !
+~-------------------------------------------------------%
