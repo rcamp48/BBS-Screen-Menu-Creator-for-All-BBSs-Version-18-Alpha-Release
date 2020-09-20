@@ -1,11 +1,11 @@
-^--------------------------------------------------+
-!                                                  !
-! Internet Menu    Spy Visits Spy BBS              !
-!                                                  !
-*--------------------------------------------------=
-!             [T] Telnet Outbound                  !
-!             [F] FTP Outbound                     !
-!                                                  !
-!             [?] Info on Telnet and  FTP          !
-!             [Q] Quit to Previous Menu            !
-~--------------------------------------------------%
+^{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{$
+!                                                  <
+! Internet Menu            Spy Visits Spy BBS      <
+!                                                  <
+*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}=
+!             [T] Telnet Outbound                  <
+!             [F] FTP Outbound                     <
+!                                                  <
+!             [?] Info on Telnet and  FTP          <
+!             [Q] Quit to Previous Menu            <
+~>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>%

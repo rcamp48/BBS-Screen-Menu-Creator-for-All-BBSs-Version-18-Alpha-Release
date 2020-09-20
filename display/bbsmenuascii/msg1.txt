@@ -1,12 +1,12 @@
-^-------------------------------------------------+
-!                Main Message Menu                !
-*-------------------------------------------------=
-!               Spy Visits Spy  BBS               !
-*-------------------------------------------------=
-! [C] Check Your Mail   [S] Scan Messages         !
-! [E] Enter New Message [J] Join Conference       !
-! [F] FILE MENU         [U] Update Settings       !
-! [G] Goodbye           [H] Help Level            !
-! [Q] Quit to Main Menu [?] Command Help          !
-! [R] Read Messages                               !
-~-------------------------------------------------%
+^{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{$
+!                Main Message Menu                <
+*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}=
+!               Spy Visits Spy  BBS               <
+*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}=
+! [C] Check Your Mail   [S] Scan Messages         <
+! [E] Enter New Message [J] Join Conference       <
+! [F] FILE MENU         [U] Update Settings       <
+! [G] Goodbye           [H] Help Level            <
+! [Q] Quit to Main Menu [?] Command Help          <
+! [R] Read Messages                               <
+~>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>%

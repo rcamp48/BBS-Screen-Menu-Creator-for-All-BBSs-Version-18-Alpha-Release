@@ -1,14 +1,14 @@
-^---------------------------------------------------------------------------+
-!                 Welcome to              Spy Visits Spy BBS                !
-*---------------------------------------------------------------------------=
-!                                                                           !
-!           File Menu                                  On Every Menu        !
-!                                                                           !
-*------------------------------------------------&--&-----------------------=
-! [D] Download Files     [P] Personal Stats      !  ! [G]  Goodbye          !
-! [E] Edit Marked List   [Q] Quit To MAIN MENU   !  ! [H]  Help Level       !
-! [I] Info. On A File    [S] Search For Files    !  ! [J]  Join Conference  !
-! [L] List Files         [U] Upload Files        !  ! [Y]  Your Settings    !
-! [M] MESSAGE MENU       [V] View Compressed File!  !                       !
-! [N] New Files Listing  [F] File Transfer Help  !  ! [?]  Command Help     !
-~------------------------------------------------#--#-----------------------%
+^{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{$
+!                 Welcome to              Spy Visits Spy BBS                <
+*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>=
+!                                                                           <
+!           File Menu                                  On Every Menu        <
+!                                                                           <
+*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}&}}&}}}}}}}}}}}}}}}}}}}}}}}=
+! [D] Download Files     [P] Personal Stats      <  ! [G]  Goodbye          <
+! [E] Edit Marked List   [Q] Quit To MAIN MENU   <  ! [H]  Help Level       <
+! [I] Info. On A File    [S] Search For Files    <  ! [J]  Join Conference  <
+! [L] List Files         [U] Upload Files        <  ! [Y]  Your Settings    <
+! [M] MESSAGE MENU       [V] View Compressed File<  !                       <
+! [N] New Files Listing  [F] File Transfer Help  <  ! [?]  Command Help     <
+~>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#>>#>>>>>>>>>>>>>>>>>>>>>>>%

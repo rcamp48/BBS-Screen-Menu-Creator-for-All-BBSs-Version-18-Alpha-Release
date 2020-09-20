@@ -25,7 +25,7 @@ DIM filess AS STRING
 DIM fnames AS STRING
 'above variables are all string variables that are used for storing different information that in the
 'Wildcat, Winserver, Ascii, and Ansi screens that are either read in , or written out to different filenames
-'in my program. The *120, or *16 etc are just string lenghths.
+'in my program. The *120, or *16 etc are just string lengths.
 
 DIM file1 AS STRING ' file1 is the ascii input file for the displays or menus that either other people or I create
 DIM file2 AS STRING ' file2 is the ansi file created by he program from the ascii file above
@@ -43,7 +43,7 @@ DIM verticalines AS STRING
 DIM foregroundcoloransi AS STRING
 DIM backgroundcoloransi AS STRING
 DIM foregroundcolorbbs AS STRING
-DIM backgroundcolorbbs AS STRING
+DIM backgroundcolorbbs AS STRING ' Background and foreground string settings
 DIM foregroundcolorpcb AS STRING
 DIM backgroundcolorpcb AS STRING
 DIM foregroundcolorsynchro AS STRING
@@ -88,7 +88,8 @@ DIM randome AS STRING
 _FULLSCREEN
 CLS
 SCREEN 12
-COLOR 14, 12
+COLOR 12, 1
+
 LOCATE 10, 24
 PRINT "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 LOCATE 11, 24
@@ -96,7 +97,7 @@ PRINT "%                 BBS Screen Creator Written By Russ Campbell            
 LOCATE 12, 24
 PRINT "%                                                                              %"
 LOCATE 13, 24
-PRINT "%                   Final Version 15 Release Candidate RC2                     %"
+PRINT "%           ***       Alpha Version 18 Release Candidate RC8      ***          %"
 LOCATE 14, 24
 PRINT "%                                                                              %"
 LOCATE 15, 24
@@ -119,8 +120,8 @@ COLOR 7, 0
 setup:
 CLS
 PRINT
-PRINT "BBS Menu Color Scheme Creator Version 15 Final Version RC1"
-PRINT "Written by Russ Campbell Updated September 15 2020"
+PRINT "BBS Menu Color Scheme Creator Version 18 Alpha Version RC8"
+PRINT "Written by Russ Campbell Updated September 15 2020 (c) 2020"
 PRINT
 PRINT "First of all design your menus in straight text no colors, etc"
 PRINT "Do not put any background colors in either as the program will"
@@ -148,12 +149,15 @@ LOOP
 CLS
 PRINT
 PRINT "The menus have changed , see below for instuctions"
+PRINT "Especiallly the symbols for Top, Middle and Bottom"
+PRINT "Lines as well as Vertical left and right lines    "
+PRINT "This gives me more control over screen making.    "
 PRINT
 PRINT " ^{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{$"
 PRINT " !               Main Message Menu                 <"
-PRINT " *-------------------&-----------------------------="
+PRINT " *}}}}}}}}}}}}}}}}}}}<}}}}}}}}}}}}}}}}}}}}}}}}}}}}}="
 PRINT " !                   <                             <"
-PRINT " *-------------------#-----------------------------="
+PRINT " *}}}}}}}}}}}}}}}}}}}#}}}}}}}}}}}}}}}}}}}}}}}}}}}}}="
 PRINT " ! [C] Check Your Mail   [S] Scan Messages         <"
 PRINT " ! [E] Enter New Message [J] Join Conference       <"
 PRINT " ! [F] FILE MENU         [U] Update Settings       <"
@@ -184,19 +188,20 @@ PRINT "or user set colors for the entire area that makes up all of the "
 PRINT "the menus. This can all be used in either displays or menus"
 PRINT
 PRINT "Choose [R]andom or [U]ser Set Patterns or"
-PRINT "[F]ixed Display Screens or E[X]it Program : "
+PRINT "[F]ixed Display Screens [L]oad Data File or E[X]it Program : "
 answer = UCASE$(INPUT$(1))
 
 ran = answer
 IF ran = "R" THEN GOSUB randomchoices: GOTO inputscreen
 IF ran = "F" THEN GOSUB fixedcolors: GOTO inputscreen
+IF ran = "L" THEN GOSUB load: GOTO inputscreen
 IF ran = "U" THEN GOTO inputscreen1
 IF ran = "X" THEN GOTO finish
 GOTO rand
 inputscreen1:
 CLS
 PRINT "Do you wish to use pre-selected colors or use your own sets "
-PRINT "Of color selections: (10) color schemes can be customised."
+PRINT "Of color selections: color schemes can be customised."
 
 PRINT "This section is for entering your own color schemes , it is  "
 PRINT "for selecting either Preselected or your own colors."
@@ -238,17 +243,15 @@ END IF
 combos:
 CLS
 PRINT
-PRINT "Please enter 8 different color combinations for the display , be creative : "
-PRINT "the program will pick randomly from those colors or will use them 1 at a time,"
-PRINT "depending on what you choose, either you will use the colors one at a time or "
-PRINT "you will use the same colors randomly. This can be fun to do and interesting."
-PRINT "depending on what you choose."
+PRINT "Please enter 6 different color combinations for the display , be creative : "
+PRINT "the program will use the colors that you have selected as output for your,"
+PRINT "display based on what you choose, you will be given the option to load "
+PRINT "and save yout colors every time you run the program."
 PRINT
 PRINT "Press any key...."
 DO WHILE INKEY$ = ""
 LOOP
 GOSUB back
-GOSUB inputscreen
 GOSUB create
 GOTO inputscreen
 back:
@@ -265,6 +268,8 @@ PRINT "Is This readable [Y]es or [N]o : "
 answer = INPUT$(1)
 answer = UCASE$(answer)
 IF answer = "N" THEN GOTO back1a
+IF answer = "Y" THEN GOTO back1b
+GOTO back1a
 back1b:
 GOSUB background
 INPUT "Outside Lines Background 1b [From 0 to  7] : ", g1b
@@ -278,6 +283,9 @@ PRINT "Is This readable [Y]es or [N]o : "
 answer = INPUT$(1)
 answer = UCASE$(answer)
 IF answer = "N" THEN GOTO back1b
+IF answer = "Y" THEN GOTO back1c
+GOTO back1b
+
 back1c:
 GOSUB background
 INPUT "Outside Lines Background 1c [From 0 to  7] : ", g1c
@@ -291,6 +299,9 @@ PRINT "Is This readable [Y]es or [N]o : "
 answer = INPUT$(1)
 answer = UCASE$(answer)
 IF answer = "N" THEN GOTO back1c
+IF answer = "Y" THEN GOTO back1d
+GOTO back1c
+
 back1d:
 GOSUB background
 INPUT "Outside Lines Background 1d [From 0 to  7] : ", g1d
@@ -304,6 +315,8 @@ PRINT "Is This readable [Y]es or [N]o : "
 answer = INPUT$(1)
 answer = UCASE$(answer)
 IF answer = "N" THEN GOTO back1d
+IF answer = "Y" THEN GOTO back2
+GOTO back1d
 
 back2:
 GOSUB background
@@ -320,6 +333,9 @@ PRINT
 PRINT "Is This readable [Y]es or [N]o : "
 answer = UCASE$(INPUT$(1))
 IF answer = "N" THEN GOTO back2
+IF answer = "Y" THEN GOTO back3a
+GOTO back2
+
 back3a:
 GOSUB background
 INPUT "Inside Lines Background  [From 0 to  7] : ", g
@@ -332,6 +348,10 @@ PRINT
 PRINT "Is This readable [Y]es or [N]o : "
 answer = UCASE$(INPUT$(1))
 IF answer = "N" THEN GOTO back3a
+IF answer = "Y" THEN GOTO fnd
+
+GOTO back3a
+fnd:
 RETURN
 
 inputscreen:
@@ -499,6 +519,7 @@ IF menuchoice = "D" THEN
     contlne = 0
     GOSUB pick0
     GOSUB selector
+    ON ERROR GOTO errorhandle
     OPEN asciidisp FOR INPUT AS #1
 
     IF display = "ansi" THEN
@@ -526,8 +547,9 @@ IF menuchoice = "M" THEN
     contlne = 0
     GOSUB pick0
     GOSUB selector
+    ON ERROR GOTO errorhandle
     OPEN asciimenu FOR INPUT AS #1
-
+    ON ERROR GOTO errorhandle
     OPEN asciipromptmenu FOR INPUT AS #3
 
     IF display = "ansi" THEN
@@ -1058,7 +1080,9 @@ DO UNTIL EOF(1)
             END IF
         END IF
     NEXT i
+    b8a = 0
     b9a = 0
+    b10a = 0
     b11a = 0
     PRINT #2, ""
     PRINT
@@ -1127,7 +1151,7 @@ PRINT "on Facebook at many of the groups"
 PRINT "I am in , or email me at"
 PRINT "rcamp48@rogers.com"
 PRINT
-PRINT "Thank you for using BBS Menu Color Scheme Creator 15 RC3"
+PRINT "Thank you for using BBS Menu Color Scheme Creator 18 RC8"
 PRINT
 END
 pick0:
@@ -1300,11 +1324,11 @@ IF b = CHR$(94) THEN
     b1a = b1a + 1
     IF b1a = 1 THEN
         b1 = 1
-    ELSEIF b1a = 1 AND b2a = 1 THEN
+    ELSEIF b1a = 1 AND b6a = 1 THEN
         b1 = 2
-    ELSEIF b1a = 2 AND b2a = 2 THEN
+    ELSEIF b1a = 2 AND b6a = 2 THEN
         b1 = 3
-    ELSEIF b1a = 3 AND b2a = 3 THEN
+    ELSEIF b1a = 3 AND b6a = 3 THEN
         b1 = 4
 
     END IF
@@ -1316,11 +1340,11 @@ IF b = CHR$(36) THEN
     b2a = b2a + 1
     IF b2a = 1 THEN
         b1 = 1
-    ELSEIF b2a = 1 AND b2a = 1 THEN
+    ELSEIF b2a = 1 AND b1a = 1 THEN
         b1 = 2
-    ELSEIF b2a = 2 AND b2a = 2 THEN
+    ELSEIF b2a = 2 AND b1a = 2 THEN
         b1 = 3
-    ELSEIF b2a = 3 AND b2a = 3 THEN
+    ELSEIF b2a = 3 AND b1a = 3 THEN
         b1 = 4
 
     END IF
@@ -1352,7 +1376,7 @@ IF b = CHR$(126) THEN
     END IF
 END IF
 
-IF b = CHR$(124) THEN
+IF b = CHR$(125) THEN
     b = middlelineconnector
     b1 = 1
 
@@ -1396,6 +1420,8 @@ IF b = CHR$(38) THEN
     IF b8a = 1 THEN
         b1 = 1
     ELSEIF b8a = 2 AND b1a = 1 THEN
+        b1 = 1
+    ELSEIF b8a = 2 AND b1a = 2 THEN
         b1 = 2
     ELSEIF b8a = 3 AND b1a = 2 THEN
         b1 = 3
@@ -1426,6 +1452,8 @@ IF b = CHR$(35) THEN
     IF b10a = 1 THEN
         b1 = 1
     ELSEIF b10a = 2 AND b1a = 1 THEN
+        b10a = 1
+    ELSEIF b10a = 2 AND b1a = 2 THEN
         b10a = 2
     ELSEIF b10a = 3 AND b1a = 2 THEN
         b1 = 3
@@ -1453,11 +1481,11 @@ IF b = CHR$(33) THEN
     b6a = b6a + 1
     IF b6a = 1 THEN
         b1 = 1
-    ELSEIF b6a = 2 AND b1a = 1 THEN
+    ELSEIF b6a = 1 AND b1a = 1 THEN
         b1 = 2
-    ELSEIF b6a = 3 AND b1a = 2 THEN
+    ELSEIF b6a = 2 AND b1a = 2 THEN
         b1 = 3
-    ELSEIF b6a = 4 AND b1a = 3 THEN
+    ELSEIF b6a = 3 AND b1a = 3 THEN
         b1 = 4
     END IF
 END IF
@@ -1466,18 +1494,18 @@ IF b = CHR$(60) THEN
     b7a = b7a + 1
     IF b7a = 1 THEN
         b1 = 1
-    ELSEIF b7a = 2 AND b4a = 1 THEN
-        b1 = 24
-    ELSEIF b7a = 3 AND b4a = 2 THEN
+    ELSEIF b7a = 1 AND b4a = 1 THEN
+        b1 = 2
+    ELSEIF b7a = 2 AND b4a = 2 THEN
         b1 = 3
-    ELSEIF b7a = 4 AND b4a = 3 THEN
+    ELSEIF b7a = 3 AND b4a = 3 THEN
         b1 = 4
     END IF
 END IF
 
 RETURN
 specialcharacters3:
-IF b = CHR$(94) OR b = CHR$(60) OR b = CHR$(62) OR b = CHR$(123) OR b = CHR$(36) OR b = CHR$(43) OR b = CHR$(37) OR b = CHR$(126) OR b = CHR$(124) OR b = CHR$(38) OR b = CHR$(35) OR b = CHR$(42) OR b = CHR$(33) OR b = CHR$(61) THEN
+IF b = CHR$(94) OR b = CHR$(60) OR b = CHR$(62) OR b = CHR$(123) OR b = CHR$(36) OR b = CHR$(43) OR b = CHR$(37) OR b = CHR$(126) OR b = CHR$(125) OR b = CHR$(38) OR b = CHR$(35) OR b = CHR$(42) OR b = CHR$(33) OR b = CHR$(61) THEN
     flag = "Y1"
 ELSEIF b = CHR$(91) OR b = CHR$(93) THEN
     flag = "Y2"
@@ -1530,6 +1558,8 @@ errorhandle:
 CLS
 CLOSE #1
 PRINT
+PRINT "Oops, you did something wrong there (or I did) ... "
+PRINT
 PRINT "Most likely there was a filename that you entered"
 PRINT "That did not exist or you have not created the"
 PRINT "prompt file for the Menu item desired. Or you picked"
@@ -1538,6 +1568,10 @@ PRINT "a Menu display, the difference is that Menu output "
 PRINT "files have a prompt file, display files do not. "
 PRINT
 PRINT "Your File "; file1; " Has Not Been Found .... Please Try Again."
+PRINT
+PRINT "If the file is there and it still gives an error, then please"
+PRINT "report this as a program error and contact me at rcamp48@rogers.com "
+PRINT
 PRINT "Press any key to try again......"
 DO WHILE INKEY$ = ""
 LOOP
@@ -1574,8 +1608,8 @@ g1d = 6
 t1d = 11
 g2 = 7
 t2 = 1
-g = 4
-t = 12
+g = 6
+t = 14
 RETURN
 create:
 CLS
@@ -1584,13 +1618,16 @@ answer = UCASE$(INPUT$(1))
 IF answer$ = "N" THEN GOTO inputscreen
 PRINT
 PRINT
-INPUT "Enter Filename [No extender :  ", filess
+INPUT "Enter Filename [No extender] [Press enter for default] : ", filess
 PRINT
+IF filess = "" THEN filess = "default"
+
 filess = filess + ".dat"
 fnames = "c:\display\data\" + filess
 PRINT "Saving data............"
 PRINT
-OPEN fname$ FOR OUTPUT AS #2
+ON ERROR GOTO errorhandle
+OPEN fnames FOR OUTPUT AS #2
 PRINT #2, g1a
 PRINT #2, t1a
 PRINT #2, g1b
@@ -1608,13 +1645,15 @@ RETURN
 load:
 CLS
 PRINT "Load Data File..........."
-INPUT "Enter Filename [No extender :  ", filess
+INPUT "Enter Filename [No extender] [Press enter for default] :  ", filess
 PRINT
+IF filess = "" THEN filess = "default"
 filess = filess + ".dat"
 fnames = "c:\display\data\" + filess
 PRINT
 PRINT "Loading data..........."
 PRINT
+ON ERROR GOTO errorhandle
 OPEN fnames FOR INPUT AS #1
 INPUT #1, g1a
 INPUT #1, t1a
@@ -1662,10 +1701,10 @@ IF g1c = g1d THEN GOTO trulyrandom
 IF g1d = g1a THEN GOTO trulyrandom
 IF g1d = g1b THEN GOTO trulyrandom
 IF g1d = g1c THEN GOTO trulyrandom
-IF g1a = g2 THEN GOTO trulyrandom
-IF g1b = g2 THEN GOTO trulyrandom
-IF g1c = g2 THEN GOTO trulyrandom
-IF g1d = g2 THEN GOTO trulyrandom
+IF g1a = g THEN GOTO trulyrandom
+IF g1b = g THEN GOTO trulyrandom
+IF g1c = g THEN GOTO trulyrandom
+IF g1d = g THEN GOTO trulyrandom
 IF g = ga1 OR g = g2 THEN GOTO trulyrandom
 IF g = g1b OR g = g2 THEN GOTO trulyrandom
 IF g = g1c OR g = g2 THEN GOTO trulyrandom
