@@ -1150,6 +1150,24 @@ END IF
 
 IF b = CHR$(45) THEN
     b = lineconnector
+    IF b1a = 1 THEN
+        b1 = 1
+    ELSEIF b1a = 2 THEN
+        b1 = 2
+    ELSEIF bla = 3 THEN
+        b1 = 3
+    ELSEIF b1a = 4 THEN
+        b1 = 4
+    END IF
+    IF b3a = 1 THEN
+        b1 = 4
+    ELSEIF b3a = 2 THEN
+        b1 = 3
+    ELSEIF b32 = 3 THEN
+        b1 = 2
+    ELSEIF b3a = 4 THEN
+        b1 = 1
+    END IF
 
 
 
@@ -1158,72 +1176,36 @@ END IF
 IF b = CHR$(38) THEN
     b = connector1
 
-    IF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 3 OR b1a = 4 AND b1 = 1 THEN
-        b1 = 1
-    ELSEIF b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 2
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 3
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 4 THEN
-        b1 = 4
-    END IF
 
 
 END IF
 IF b = CHR$(61) THEN
     b = connector2
-    IF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 3 OR b1a = 4 AND b1 = 1 THEN
-        b1 = 1
-    ELSEIF b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 2
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 3
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 4 THEN
-        b1 = 4
-    END IF
 END IF
 IF b = CHR$(35) THEN
     b = connector3
-    IF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 3 OR b1a = 4 AND b1 = 1 THEN
-        b1 = 1
-    ELSEIF b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 2
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 3
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 4 THEN
-        b1 = 4
-    END IF
 END IF
 IF b = CHR$(42) THEN
     b = connector4
-    IF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 3 OR b1a = 4 AND b1 = 1 THEN
-        b1 = 1
-    ELSEIF b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 2
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 2 THEN
-        b1 = 3
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 AND b1 = 4 THEN
-        b1 = 4
-    END IF
 END IF
 IF b = CHR$(33) THEN
     b = verticalline
-    b1a = b1a + 1
-    IF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 OR b1a = 5 OR b1a = 6 OR b1a = 7 OR b1a = 8 AND b1 = 1 THEN
+    IF b1a = 1 THEN
         b1 = 1
-    ELSEIF b1a = 9 OR b1a = 10 OR b1a = 11 OR b1a = 12 OR b1a = 13 OR b1a = 14 OR b1a = 15 OR b1a = 16 AND b1 = 1 THEN
+    ELSEIF b1a = 2 THEN
         b1 = 2
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 OR b1a = 5 OR b1a = 6 OR b1a = 7 OR b1a = 8 AND b1 = 2 THEN
+    ELSEIF bla = 3 THEN
         b1 = 3
-    ELSEIF b1a = 9 OR b1a = 10 OR b1a = 11 OR b1a = 12 OR b1a = 13 OR b1a = 14 OR b1a = 15 OR b1a = 16 AND b1 = 2 THEN
+    ELSEIF b1a = 4 THEN
         b1 = 4
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 OR b1a = 5 OR b1a = 6 OR b1a = 7 OR b1a = 8 AND b1 = 3 THEN
+    END IF
+    IF b2a = 1 THEN
         b1 = 4
-    ELSEIF b1a = 9 OR b1a = 10 OR b1a = 11 OR b1a = 12 OR b1a = 13 OR b1a = 14 OR b1a = 15 OR b1a = 16 AND b1 = 3 THEN
+    ELSEIF b2a = 2 THEN
         b1 = 3
-    ELSEIF b1a = 1 OR b1a = 2 OR b1a = 3 OR b1a = 4 OR b1a = 5 OR b1a = 6 OR b1a = 7 OR b1a = 8 AND b1 = 4 THEN
+    ELSEIF b2a = 3 THEN
         b1 = 2
-    ELSEIF b1a = 9 OR b1a = 10 OR b1a = 11 OR b1a = 12 OR b1a = 13 OR b1a = 14 OR b1a = 15 OR b1a = 16 AND b1 = 4 THEN
+    ELSEIF b2a = 4 THEN
         b1 = 1
     END IF
 END IF
