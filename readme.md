@@ -1,5 +1,5 @@
 # BBS-Screen-Menu-Creator-for-All-BBSs-Version-18-Alpha-Release
- Version 16 with up to 4 inner boxes, each one a different color
+ Version 18 with up to 4 inner boxes, each one a different color
 This is is version 18 of my BBS Color Screen Scheme Creator, a very easy to use program with data files included.
 
 The program itself is very easy to use , all you do is run the exe file in the zip folder and go through a few opening screens then you get to the main screen where you can select the file to load by typing in the names on the list. You then choose which BBS type that you want to write the output file for.
